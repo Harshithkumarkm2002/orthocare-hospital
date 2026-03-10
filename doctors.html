@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Our Doctors - OrthoCare Hospital</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .doctors-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+
+    .doctor-card {
+      border: 1px solid #ddd;
+      background: white;
+      padding: 20px;
+      margin: 15px;
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+
+    .doctor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .doctor-card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .doctor-card p {
+      margin: 6px 0;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    /* Dark mode overrides */
+    body.dark-mode .doctor-card {
+      background: #1e1e1e;
+      border: 1px solid #555;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+    }
+
+    body.dark-mode .doctor-card h3 {
+      color: #90e0ef;
+    }
+
+    body.dark-mode .doctor-card p {
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>OrthoCare Hospital</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button id="theme-toggle">Toggle Dark Mode</button>
+</header>
+
+<section class="hero">
+  <h1>Meet Our Specialists</h1>
+  <p>Experienced doctors dedicated to your care</p>
+</section>
+
+<section class="info">
+  <div class="doctors-container">
+    <div class="doctor-card">
+      <h3>Dr. Ramesh</h3>
+      <p><strong>Specialization:</strong> Orthopedic Surgeon</p>
+      <p><strong>Experience:</strong> 15 Years</p>
+      <p><strong>Expertise:</strong> Trauma Surgery, Spine Care</p>
+    </div>
+
+    <div class="doctor-card">
+      <h3>Dr. Priya</h3>
+      <p><strong>Specialization:</strong> Joint Replacement Specialist</p>
+      <p><strong>Experience:</strong> 10 Years</p>
+      <p><strong>Expertise:</strong> Knee & Hip Replacement</p>
+    </div>
+
+    <div class="doctor-card">
+      <h3>Dr. Anil</h3>
+      <p><strong>Specialization:</strong> Sports Injury Specialist</p>
+      <p><strong>Experience:</strong> 12 Years</p>
+      <p><strong>Expertise:</strong> Arthroscopy, Rehabilitation</p>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="button" onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 OrthoCare Hospital | All Rights Reserved</p>
+</footer>
+
+<script src="theme.js"></script>
+</body>
+</html>

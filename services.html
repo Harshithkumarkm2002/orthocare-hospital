@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Our Services - OrthoCare Hospital</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .services-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      background: white;
+      padding: 20px;
+      margin: 15px;
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin: 8px 0;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    /* Dark mode overrides */
+    body.dark-mode .card {
+      background: #1e1e1e;
+      border: 1px solid #555;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+    }
+
+    body.dark-mode .card h3 {
+      color: #90e0ef;
+    }
+
+    body.dark-mode .card p {
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>OrthoCare Hospital</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button id="theme-toggle">Toggle Dark Mode</button>
+</header>
+
+<section class="hero">
+  <h1>Our Services</h1>
+  <p>Comprehensive orthopedic care tailored to your needs</p>
+</section>
+
+<section class="info">
+  <div class="services-container">
+    <div class="card">
+      <h3>Knee Replacement</h3>
+      <p>Advanced surgical techniques for knee joint restoration, ensuring faster recovery and improved mobility.</p>
+    </div>
+
+    <div class="card">
+      <h3>Fracture Treatment</h3>
+      <p>Comprehensive fracture care with modern orthopedic methods for effective healing and rehabilitation.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sports Injury</h3>
+      <p>Specialized treatment for athletes, including arthroscopy, physiotherapy, and rehabilitation programs.</p>
+    </div>
+
+    <div class="card">
+      <h3>Spine Care</h3>
+      <p>Expert management of spinal disorders, offering both surgical and non-surgical treatment options.</p>
+    </div>
+
+    <div class="card">
+      <h3>Joint Replacement</h3>
+      <p>Hip and shoulder replacement surgeries performed with precision for long-term relief and mobility.</p>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="button" onclick="window.location.href='index.html'">← Back to Home</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 OrthoCare Hospital | All Rights Reserved</p>
+</footer>
+
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact - OrthoCare Hospital</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-card {
+      width: 400px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: slideUp 1.5s ease;
+      text-align: left;
+    }
+
+    .contact-card p {
+      font-size: 1.1em;
+      margin: 12px 0;
+    }
+
+    .contact-card a {
+      color: #0077b6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #023e8a;
+    }
+
+    .contact-card button {
+      background: #0077b6;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-card button:hover {
+      background: #023e8a;
+      transform: scale(1.05);
+    }
+
+    /* Dark mode overrides */
+    body.dark-mode .contact-card {
+      background: #1e1e1e;
+      border: 1px solid #555;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+    }
+
+    body.dark-mode .contact-card p {
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .contact-card a {
+      color: #90e0ef;
+    }
+
+    body.dark-mode .contact-card a:hover {
+      color: #caf0f8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>OrthoCare Hospital</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button id="theme-toggle">Toggle Dark Mode</button>
+</header>
+
+<section class="hero">
+  <h1>Contact Us</h1>
+  <p>We’re here to help you 24/7</p>
+</section>
+
+<section class="info">
+  <div class="contact-card">
+    <p><strong>Location:</strong> Bangalore, India</p>
+    <p><strong>Phone:</strong> +91 9876543210</p>
+    <p><strong>Email:</strong> <a href="mailto:orthocare@gmail.com">orthocare@gmail.com</a></p>
+    <p><strong>Working Hours:</strong> Monday - Saturday, 9 AM - 8 PM</p>
+    <p><strong>Emergency Services:</strong> Available 24/7</p>
+    <button type="button" onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 OrthoCare Hospital | All Rights Reserved</p>
+</footer>
+
+<script src="theme.js"></script>
+</body>
+</html>

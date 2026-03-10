@@ -1,0 +1,311 @@
+/* Base Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+}
+
+main {
+  flex: 1; /* pushes footer down */
+}
+
+/* Header */
+header {
+  background: #0077b6;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #90e0ef;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #caf0f8, #ade8f4);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  animation: slideDown 1.5s ease;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease;
+}
+
+/* Buttons */
+button {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #023e8a;
+  transform: scale(1.05);
+}
+
+/* Info Sections */
+section.info {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.info h2 {
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.info p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Cards (Services, Doctors, Contact) */
+.services-container,
+.doctors-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.card,
+.doctor-card,
+.contact-card {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 20px;
+  margin: 15px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.card:hover,
+.doctor-card:hover,
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card h3,
+.doctor-card h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.card p,
+.doctor-card p,
+.contact-card p {
+  margin: 8px 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Appointment form container */
+.form-container {
+  width: 400px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.form-step {
+  margin-bottom: 20px;
+}
+
+.form-step label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.form-step input,
+.form-step select,
+.form-step textarea {
+  width: calc(100% - 10px);
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+}
+
+.form-step input:focus,
+.form-step select:focus,
+.form-step textarea:focus {
+  border: 1px solid #0077b6;
+  outline: none;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  margin: 5px;
+  width: 45%;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: #222;
+}
+
+body.dark-mode nav a {
+  color: #e0e0e0;
+}
+
+body.dark-mode nav a:hover {
+  color: #90e0ef;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(to right, #333, #444);
+}
+
+body.dark-mode button {
+  background: #0077b6;
+  color: #fff;
+}
+
+body.dark-mode button:hover {
+  background: #023e8a;
+}
+
+body.dark-mode footer {
+  background: #222;
+}
+
+body.dark-mode .form-container {
+  background: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .form-step label {
+  color: #90e0ef;
+}
+
+body.dark-mode .form-step input,
+body.dark-mode .form-step select,
+body.dark-mode .form-step textarea {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+body.dark-mode .form-step input:focus,
+body.dark-mode .form-step select:focus,
+body.dark-mode .form-step textarea:focus {
+  border: 1px solid #90e0ef;
+}
+
+body.dark-mode .card,
+body.dark-mode .doctor-card,
+body.dark-mode .contact-card {
+  background: #1e1e1e;
+  border: 1px solid #555;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .card h3,
+body.dark-mode .doctor-card h3 {
+  color: #90e0ef;
+}
+
+body.dark-mode .card p,
+body.dark-mode .doctor-card p,
+body.dark-mode .contact-card p {
+  color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .services-container,
+  .doctors-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .doctor-card,
+  .contact-card,
+  .form-container {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+}
