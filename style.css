@@ -309,3 +309,75 @@ body.dark-mode .contact-card p {
     margin: 5px 0;
   }
 }
+
+/* Info sections */
+body.dark-mode section.info {
+  background: #121212;   /* dark background */
+  color: #e0e0e0;        /* light text */
+}
+
+/* Cards (services, doctors, contact) */
+body.dark-mode .card,
+body.dark-mode .doctor-card,
+body.dark-mode .contact-card {
+  background: #1e1e1e;
+  border: 1px solid #555;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .card h3,
+body.dark-mode .doctor-card h3 {
+  color: #90e0ef;
+}
+
+body.dark-mode .card p,
+body.dark-mode .doctor-card p,
+body.dark-mode .contact-card p {
+  color: #e0e0e0;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+}
+
+.stat h3 {
+  color: #0077b6;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  color: #555;
+}
+
+/* Dark mode overrides */
+body.dark-mode .stat {
+  background: #1e1e1e;
+  border: 1px solid #555;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .stat h3 {
+  color: #90e0ef;
+}
+
+body.dark-mode .stat p {
+  color: #e0e0e0;
+}
